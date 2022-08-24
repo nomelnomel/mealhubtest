@@ -72,6 +72,10 @@ $border: 1px solid #bebefd;
     text-decoration: none;
     color: black;
 
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+    }
+
     &:first-child{
       border-top: $border;
     }
@@ -81,9 +85,18 @@ $border: 1px solid #bebefd;
       border-right: $border;
       flex: 1 1 0;
 
+      @media screen and (max-width: 768px) {
+        border-bottom: $border;
+        border-left: $border;
+      }
+
       &:first-child{
         max-width: 100px;
         border-left: $border;
+
+        @media screen and (max-width: 768px) {
+         max-width: unset;
+        }
       }
     }
   }
