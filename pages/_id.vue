@@ -1,6 +1,12 @@
 <template>
   <div v-if="comment?.id">
-    {{ comment }}
+    <div class="comment">
+      <div><span>PostId</span>: {{ comment.postId }}</div>
+      <div><span>Id</span>: {{ comment.id }}</div>
+      <div><span>Name</span>: {{ comment.name }}</div>
+      <div><span>Email</span>: {{ comment.email }}</div>
+      <div><span>Body</span>: {{ comment.body }}</div>
+    </div>
   </div>
 </template>
 
@@ -23,6 +29,14 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+ .comment{
+   display: flex;
+   flex-direction: column;
 
+   div span {
+     font-weight: bold;
+   }
+
+ }
 </style>
